@@ -1,0 +1,23 @@
+{
+  "name": "px-rem-parser-loader",
+  "version": "1.0.0",
+  "description": "基于webpack的px转rem的loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwenbin1991/px-rem-parser-loader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zwenbin1991/px-rem-parser-loader/issues"
+  },
+  "homepage": "https://github.com/zwenbin1991/px-rem-parser-loader#readme",
+  "devDependencies": {
+    "loader-utils": "^0.2.15",
+    "webpack": "^1.13.1"
+  }
+}
