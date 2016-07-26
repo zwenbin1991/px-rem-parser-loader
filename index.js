@@ -37,6 +37,8 @@ module.exports = function (content) {
         && RegExp.$1 === __UNREM__)
             return content;
 
+    const query = loaderUtils.parseQuery(this.query);
+
     return content.replace(matchCSSRuleExp, function (match, prefix, name, value, cmd, cmdValue) {
         // 如果css规则结尾有@
         if (cmd && cmdValue === __UNREM__)
@@ -46,7 +48,7 @@ module.exports = function (content) {
             return match;
 
         return match.replace(matchPXExp, function (px, pxValue) {
-            return Number((+pxValue / defaultOption.rem).toFixed(4))
+            return Number((+pxValue / (query && query.rem ? query.rem : defaultOption.rem)).toFixed(4)) + __UNIT__;
         });
     });
 };
